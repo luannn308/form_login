@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>EXERCISE 9</title>
+    </head>
+    <body>
+        <div class="form signin js-sign-in">
+            <div class="signin__logo"><img src="./assets/img/logo-paxy.svg" alt="logo" /></div>
+            <form action="" class="signin__account">
+                <div class="flex-column input-account">
+                    <span>Email</span>
+                    <input type="email" required id="contact-email" />
+                </div>
+                <div class="flex-column input-account">
+                    <span>Password</span>
+                    <input type="password" class="pass" required id="contact-password" />
+                    <img src="./assets/img/icon-eye.svg" alt="" />
+                </div>
+                <input class="signin-btn" type="submit" value="Sign In" />
+            </form>
+            <div class="signin__forgot"><a href="#">Forgot password?</a></div>
+            <div class="signin__or">
+                <span>or</span>
+                <div class="wall"></div>
+            </div>
+            <div class="signin__with">
+                <a href="#" class="btn-with facebook">
+                    <button>
+                        <img src="./assets/img/facebook-logo.png" alt="facebook" />
+                        <span>Sign in with Facebook</span>
+                    </button>
+                </a>
+                <a href="#" class="btn-with google">
+                    <button>
+                        <img src="./assets/img/google-logo.png" alt="google" />
+                        <span>Sign in with Google</span>
+                    </button>
+                </a>
+            </div>
+            <div class="signin__signup">
+                <div class="wall"></div>
+                <span>Don’t have an account?<a class="js-sign-up">Sign Up</a></span>
+            </div>
+        </div>
+        <div class="form signup off js-show">
+            <div class="signup__logo"><img src="./assets/img/logo-paxy.svg" alt="logo" /></div>
+            <form action="" class="signup__account">
+                <div class="flex-column input-account">
+                    <span>Username</span>
+                    <input type="username" required id="contact-user" />
+                </div>
+                <div class="flex-column input-account">
+                    <span>Email</span>
+                    <input type="email" required id="contact-email" />
+                </div>
+                <div class="flex-column input-account">
+                    <span>Password</span>
+                    <input type="password" class="pass" required id="contact-password" />
+                    <img src="./assets/img/icon-eye.svg" alt="" class="pass" />
+                </div>
+                <div class="flex-column input-account">
+                    <span>Confirm Password</span>
+                    <input type="password" required id="contact-confirm" />
+                    <img src="./assets/img/icon-eye.svg" alt="" class="confirm" />
+                </div>
+                <div class="agree">
+                    <label class="anwser">
+                        <span
+                            >I have read the
+                            <a class="term" href="#" target="_blank">Terms of Service</a>
+                        </span>
+                        <input type="checkbox" class="check" required />
+                        <span class="mark"
+                            ><span class="material-icons-outlined"> done </span></span
+                        >
+                    </label>
+                </div>
+                <input class="signup-btn" type="submit" value="Create Account" />
+            </form>
+            <div class="signup__signin">
+                <div class="wall"></div>
+                <span>Already have an account?<a href="">Sign In</a></span>
+            </div>
+        </div>
+    </body>
+    <script>
+        var signUpBtn = document.querySelector(".js-sign-up");
+        var modal = document.querySelector(".js-sign-in");
+        var show = document.querySelector(".js-show");
+        function showSignUp() {
+            modal = modal.classList.add("off");
+            show = show.classList.remove("off");
+        }
+        signUpBtn.addEventListener("click", showSignUp);
+    </script>
+</html>
